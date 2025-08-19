@@ -223,6 +223,8 @@ body {
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   color: #1e293b;
   position: relative;
+  border-top: 1px solid rgba(99, 102, 241, 0.1);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
 }
 
 .light-background::before {
@@ -232,8 +234,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(236, 72, 153, 0.03) 100%);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.04) 0%, rgba(236, 72, 153, 0.04) 100%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .light-background .section-title {
@@ -242,39 +245,69 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  position: relative;
+  z-index: 2;
+}
+
+.light-background .about-content,
+.light-background .container > * {
+  position: relative;
+  z-index: 2;
 }
 
 .light-background .about-content p {
   color: #475569;
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
 }
 
 .light-background .btn-primary {
   background: var(--gradient-primary);
   color: var(--text-white);
   box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .light-background .btn-primary:hover {
   box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  transform: translateY(-3px);
 }
 
 .light-background .project-content h3 {
   color: #1e293b;
+  font-weight: var(--font-bold);
 }
 
 .light-background .project-content p {
   color: #475569;
+  line-height: 1.7;
 }
 
 .light-background .project-card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(99, 102, 241, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
+  position: relative;
+  z-index: 2;
 }
 
 .light-background .project-card:hover {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+  transform: translateY(-8px);
+}
+
+.light-background .project-link {
+  color: var(--primary-color);
+  font-weight: var(--font-semibold);
+}
+
+.light-background .project-link:hover {
+  color: var(--primary-dark);
 }
 
 .light-background .project-tech span {
@@ -433,7 +466,7 @@ body {
   position: relative;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 .header::before {
@@ -476,20 +509,24 @@ body {
   font-family: var(--font-heading);
   font-size: var(--text-6xl);
   font-weight: var(--font-extrabold);
-  margin-bottom: var(--space-4);
-  line-height: 1.1;
+  margin-bottom: var(--space-8);
+  line-height: 1.3;
   position: relative;
   color: #f8fafc;
   letter-spacing: -0.025em;
   text-align: left;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
 }
 
 .wave-icon {
-  font-size: var(--text-4xl);
-  margin-left: var(--space-2);
+  font-size: var(--text-5xl);
   animation: wave 2s ease-in-out infinite;
   color: #fbbf24;
-  vertical-align: middle;
+  display: inline-block;
+  margin-left: var(--space-2);
 }
 
 @keyframes wave {
@@ -515,9 +552,9 @@ body {
   font-size: var(--text-2xl);
   color: #06b6d4;
   font-weight: var(--font-medium);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
   letter-spacing: 0.01em;
-  line-height: 1.3;
+  line-height: 1.4;
   text-align: left;
 }
 
@@ -525,9 +562,9 @@ body {
   font-family: var(--font-primary);
   font-size: var(--text-lg);
   color: #cbd5e1;
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-12);
   line-height: 1.7;
-  max-width: 500px;
+  max-width: 520px;
   text-align: left;
   font-weight: var(--font-normal);
 }
@@ -1079,8 +1116,9 @@ body {
   }
 
   .header {
-    min-height: 80vh;
-    padding: var(--space-12) 0;
+    min-height: 85vh;
+    padding: var(--space-16) 0;
+    padding-top: 100px;
   }
 
   .header-text {
@@ -1090,6 +1128,8 @@ body {
   .main-heading {
     font-size: var(--text-4xl);
     text-align: center;
+    justify-content: center;
+    margin-bottom: var(--space-6);
   }
 
   .sub-heading {
