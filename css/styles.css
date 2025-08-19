@@ -696,7 +696,6 @@ body {
 /* About Section */
 .about-section {
   padding: var(--space-24) 0;
-  background: var(--bg-secondary);
 }
 
 .about-content {
@@ -791,7 +790,6 @@ body {
 /* Portfolio Section */
 .portfolio-section {
   padding: var(--space-24) 0;
-  background: var(--bg-secondary);
 }
 
 .filter-buttons {
