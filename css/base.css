@@ -115,6 +115,28 @@ body {
   border-top: 1px solid rgba(99, 102, 241, 0.1);
 }
 
+/* Light background sections */
+.light-background {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #1e293b;
+}
+
+.light-background .section-title {
+  color: #1e293b;
+}
+
+.light-background .about-content p {
+  color: #475569;
+}
+
+.light-background .project-content h3 {
+  color: #1e293b;
+}
+
+.light-background .project-content p {
+  color: #475569;
+}
+
 @media (max-width: 768px) {
   .section-title {
     font-size: var(--text-3xl);
