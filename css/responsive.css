@@ -1,0 +1,241 @@
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-12);
+  }
+
+  .main-heading {
+    font-size: var(--text-5xl);
+  }
+
+  .image-container {
+    width: 520px;
+    height: 520px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(248, 250, 252, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: var(--space-8);
+    gap: var(--space-4);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-normal);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-link {
+    font-size: var(--text-lg);
+    padding: var(--space-3) var(--space-4);
+    width: 100%;
+    text-align: center;
+    border-radius: var(--radius-lg);
+  }
+  
+  .nav-link:hover {
+    background: var(--bg-secondary);
+  }
+
+  .header {
+    min-height: 85vh;
+    padding: var(--space-16) 0;
+    padding-top: 100px;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .main-heading {
+    font-size: var(--text-4xl);
+    text-align: center;
+    justify-content: center;
+    margin-bottom: var(--space-6);
+  }
+
+  .sub-heading {
+    font-size: var(--text-xl);
+    text-align: center;
+  }
+
+  .description {
+    font-size: var(--text-base);
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    width: 400px;
+    height: 400px;
+  }
+
+  .floating-icon {
+    display: none;
+  }
+
+  .section-title {
+    font-size: var(--text-3xl);
+  }
+
+  .btn {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-sm);
+  }
+
+  .skills-section {
+    padding: var(--space-16) 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+  }
+
+  .skill-card {
+    padding: var(--space-6);
+  }
+
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    font-size: var(--text-2xl);
+  }
+
+  .portfolio-section {
+    padding: var(--space-16) 0;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .project-card {
+    margin: 0 var(--space-4);
+  }
+  
+  .filter-buttons {
+    margin-bottom: var(--space-12);
+  }
+  
+  .filter-btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-xs);
+  }
+
+  .contact-section {
+    padding: var(--space-16) 0;
+  }
+
+  .contact-content {
+    margin-top: var(--space-12);
+  }
+
+  .contact-item {
+    padding: var(--space-4);
+  }
+
+  .contact-item ion-icon {
+    font-size: var(--text-xl);
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .contact-form {
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: var(--text-3xl);
+  }
+
+  .wave-icon {
+    font-size: var(--text-2xl);
+  }
+
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-lg);
+  }
+
+  .skill-card h3 {
+    font-size: var(--text-lg);
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+    font-size: var(--text-xl);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    margin: 0;
+  }
+  
+  .project-content {
+    padding: var(--space-4);
+  }
+  
+  .project-image {
+    height: 150px;
+  }
+  
+  .project-placeholder {
+    font-size: var(--text-3xl);
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-3);
+  }
+
+  .contact-item ion-icon {
+    margin: 0 auto;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: var(--space-3);
+  }
+}
