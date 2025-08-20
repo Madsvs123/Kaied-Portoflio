@@ -144,11 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         if (typeof AOS !== 'undefined' && AOS.init) {
             AOS.init({
-                duration: 1000,
-                offset: 100,
-                easing: 'ease-in-out',
-                once: true
-            });
+                            duration: 600,
+                            offset: 100,
+                            easing: 'ease-in-out',
+                            once: true
+                        });
         } else {
             console.log('AOS library not loaded, animations will be disabled');
         }
